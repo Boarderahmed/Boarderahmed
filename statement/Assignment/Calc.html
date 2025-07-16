@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Calc.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="calculator">
+            <div id="display"
+                style="display:flex;justify-content:flex-end; width: 19rem;height: 5rem;border: 1px solid transparent;border-radius:5px;background-color:seashell;margin-bottom: 10px;margin-left:10px;margin-right: 10px; font-size: 2em;">
+
+            </div>
+
+            <div style="margin-bottom:100px;">
+                <div style="font-size:small;">
+                    <button id="key1" onclick="handleBtn('ON')" style="background-color: black;color:red;">ON</button>
+                    <button id="key" onclick="handleBtn('Clear')"
+                        style="background: aqua;color:red;font-size:medium;">CE</button>
+                    <button id="key" onclick="handleBtn('Delete')"
+                        style="background: black;color:red;font-size:medium;">DEL</button>
+                    <button id="key" onclick="handleSwitch('OFF')" style="background: black;color:red;">OFF</button>
+                </div>
+            </div>
+            <div class="carbox">
+
+                <div>
+                    <button id="key" onclick="handleBtn('sine')">sin</button>
+                    <button id="key" onclick="handleBtn('cosine')">cos</button>
+                    <button id="key" onclick="handleBtn('Log')">log</button>
+                    <button id="key" onclick="handleBtn('Tan')">tan</button>
+                </div>
+                <div>
+                    <button id="key" onclick="handleBtn('power')">^</button>
+                    <button id="key" onclick="handleBtn('sqrt')">√</button>
+                    <button id="key" onclick="handleBtn('comma')">,</button>
+                    <button id="key" onclick="handleBtn('modulus')">%</button>
+                </div>
+                <div>
+                    <button id="key" onclick="handleBtn('bracket')">(</button>
+                    <button id="key" onclick="handleBtn('brackett')">)</button>
+                    <button id="key" onclick="handleBtn('inverse')">In</button>
+                    <button id="key" onclick="handleBtn('exponent')">e</button>
+                </div>
+
+                <div>
+                    <button id="key" onclick="handleBtn('one')">1</button>
+                    <button id="key" onclick="handleBtn('two')">2</button>
+                    <button id="key" onclick="handleBtn('three')">3</button>
+                    <button id="key" onclick="handleBtn('four')">4</button>
+                </div>
+
+                <div>
+                    <button id="key" onclick="handleBtn('five')">5</button>
+                    <button id="key" onclick="handleBtn('six')">6</button>
+                    <button id="key" onclick="handleBtn('seven')">7</button>
+                    <button id="key" onclick="handleBtn('eight')">8</button>
+                </div>
+                <div>
+                    <button id="key" onclick="handleBtn('nine')">9</button>
+                    <button id="key" onclick="handleBtn('0')">0</button>
+                    <button id="key" onclick="handleBtn('00')">00</button>
+                    <button id="key" onclick="handleBtn('+')">+</button>
+                </div>
+
+                <div>
+                    <button id="key" onclick="handleBtn('-')">-</button>
+                    <button id="key" onclick="handleBtn('*')">*</button>
+                    <button id="key" onclick="handleBtn('/')">/</button>
+                    <button id="key" onclick="handleBtn('=')">=</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script>
+        function handleBtn(value) {
+            if (value == "ON")
+                i
+            if (value == "one") {
+                display.innerHTML += 1
+            }
+
+            if (value == "two") {
+                display.innerHTML += 2
+            }
+            if (value == "three") {
+                display.innerHTML += 3
+            }
+            if (value == "four") {
+                display.innerHTML += 4
+            }
+            if (value == "five") {
+                display.innerHTML += 5
+            }
+            if (value == "six") {
+                display.innerHTML += 6
+            }
+            if (value == "seven") {
+                display.innerHTML += 7
+            }
+            if (value == "eight") {
+                display.innerHTML += 8
+            }
+            if (value == "nine") {
+                display.innerHTML += 9
+            }
+            if (value == "0") {
+                display.innerHTML += 0
+            }
+            if (value == "00") {
+                display.innerHTML += "00"
+            }
+            if (value == "+") {
+                display.innerHTML += "+"
+            }
+            if (value == "-") {
+                display.innerHTML += "-"
+            }
+            if (value == "*") {
+                display.innerHTML += "*"
+            }
+            if (value == "/") {
+                display.innerHTML += "/"
+            }
+            if (value == "=") {
+                display.innerHTML = eval(display.innerHTML)
+            }
+            if (value == "Clear") {
+                display.innerHTML = " "
+            }
+            if (value == "Delete") {
+                display.innerHTML = display.innerHTML.slice(0, -1)
+            }
+            if (value == "power") {
+                display.innerHTML = display.innerHTML + "**"
+            }
+            if (value == "sine") {
+                display.innerHTML = Math.sin(display.innerHTML)
+            }
+            if (value == "cosine") {
+                display.innerHTML = Math.cos(display.innerHTML)
+            }
+            if (value == "Log") {
+                display.innerHTML = Math.log(display.innerHTML)
+            }
+            if (value == "sqrt") {
+                display.innerHTML = Math.sqrt(display.innerHTML)
+            }
+            if (value == "comma") {
+                display.innerHTML = display.innerHTML + ","
+            }
+            if (value == "modulus") {
+                display.innerHTML = display.innerHTML + "%"
+            }
+            if (value == "bracket") {
+                display.innerHTML = display.innerHTML + "("
+            }
+            if (value == "brackett") {
+                display.innerHTML = display.innerHTML + ")"
+            }
+            if (value == "exponent") {
+                display.innerHTML = Math.exp(display.innerHTML)
+            }
+            if (value == "inverse") {
+                display.innerHTML = Math.exp(display.innerHTML)
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

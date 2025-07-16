@@ -1,0 +1,150 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+
+}
+
+body {
+    background-color: black;
+    color: black;
+}
+
+section {
+    background-image: url(./picturee/DesMaths.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: brightness(-50px);
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content:space-between;
+    gap:25rem;
+    padding: 20px;
+}
+h2:hover{
+    color: aqua;
+}
+
+li:hover{
+    color: aqua;
+}
+.Peak {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align-last: left;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+h2 {
+    text-align:start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:brown;
+    font-family: cursive;
+    font-size: xx-large;
+    font-weight: bold;
+    
+}
+ul{
+    list-style-type: none;
+    display: flex;
+   justify-content:space-between;
+   gap: 50px;
+   color:rgb(79, 24, 24);
+   font-weight: bold;
+   margin-top: 35px;
+   float: right;
+}
+
+p {
+    margin-top: -20px;
+    color:  nrgb(8, 25, 8);
+    line-height: 40px;
+}
+p:hover{
+    color:chocolate;
+}
+
+#gen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: -50px;
+}
+
+button {
+    margin-top: 3.5rem;
+    background-color: rgb(59, 107, 91);
+    border-radius: 5px;
+    border-style: groove;
+    color: rgb(28, 7, 7);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+button:hover{
+    background-color: darkred;
+    color: aliceblue;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 0px;
+    font-size: large;
+    font-weight: medium;
+}
+
+input {
+    height: 2em;
+    margin-top: 50px;
+    border: 1px solid aqua;
+    border-radius: 7px;
+    box-shadow: 8px 8px 8px;
+    outline: transparent;
+    margin-left: 20px;
+}
+
+#calculate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: rgba(212, 204, 204, 0.4);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    color: rgb(2, 12, 21);
+    margin-top: 30px;
+    width: 25em;
+    height: 20em;
+    text-align-last: right;
+    letter-spacing: 5px;
+    box-shadow: 8px -8px 8px;
+}
+#calculate:hover{
+    background-color: rgba(164, 20, 20, 0.5);
+    color: aqua;
+}
+
+footer {
+    text-align: center;
+    font-size: smaller;
+    margin-bottom: 20px;
+    color: white;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiplcation Table Generator</title>
+    <link rel="stylesheet" href="Multiplication.css" />
+  </head>
+
+  <body>
+    <!-- Code starts -->
+
+    <section>
+      <nav>
+        <dis>
+          <h2>Multiples Generator</h2>
+        </dis>
+        <div>
+          <ul>
+            <li>Operators</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+      </nav>
+      <div class="Peak">
+        <p>
+          This app is built for students to generate different<br />Multiples of
+          any numbers, from zero to infinity
+        </p>
+        <p>
+          The app generates multiples of any number with 1 to 12.<br />Using the
+          App would make knowing your multiplication easier for you.<br />
+          You no long need your calculator to do the multiplication.
+        </p>
+      </div>
+
+      <!-- Keys -->
+
+      <div id="gen">
+        <input type="number" placeholder="Enter number" id="number" />
+        <button onclick="generator()">Generate</button>
+      </div>
+
+      <!-- Calculation -->
+      <div id="calculate">
+        <div id="calculation"></div>
+        <div id="calculation1"></div>
+        <div id="calculation2"></div>
+        <div id="calculation3"></div>
+        <div id="calculation4"></div>
+        <div id="calculation5"></div>
+        <div id="calculation6"></div>
+        <div id="calculation7"></div>
+        <div id="calculation8"></div>
+        <div id="calculation9"></div>
+        <div id="calculation10"></div>
+        <div id="calculation11"></div>
+      </div>
+
+      <div id="Output"></div>
+      <!-- Footer -->
+      <footer>
+        <div id="right">Copyright<br />2025</div>
+      </footer>
+    </section>
+    <script>
+      Output = calculation.innerHTML;
+      function generator(key) {
+        calculation.innerHTML = `${number.value} x ${1} = ${number.value * 1}`;
+        calculation1.innerHTML = `${number.value} x ${2} = ${number.value * 2}`;
+        calculation2.innerHTML = `${number.value} x ${3} = ${number.value * 3}`;
+        calculation3.innerHTML = `${number.value} x ${4} = ${number.value * 4}`;
+        calculation4.innerHTML = `${number.value} x ${5} = ${number.value * 5}`;
+        calculation5.innerHTML = `${number.value} x ${6} = ${number.value * 6}`;
+        calculation6.innerHTML = `${number.value} x ${7} = ${number.value * 7}`;
+        calculation7.innerHTML = `${number.value} x ${8} = ${number.value * 8}`;
+        calculation8.innerHTML = `${number.value} x ${9} = ${number.value * 9}`;
+        calculation9.innerHTML = `${number.value} x ${10} = ${
+          number.value * 10
+        }`;
+        calculation10.innerHTML = `${number.value} x ${11} = ${
+          number.value * 11
+        }`;
+        calculation11.innerHTML = `${number.value} x ${12} = ${
+          number.value * 12
+        }`;
+      }
+    </script>
+  </body>
+</html>

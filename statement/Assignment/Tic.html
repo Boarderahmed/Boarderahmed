@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe Game</title>
+    <style>
+      #container div {
+        display: flex;
+        border: 1px solid rgb(5, 59, 5);
+        border-radius: 10px;
+        width: 120px;
+        height: 100px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      #container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 30px;
+        background-color: rgb(133, 104, 30);
+        border-radius: 20px;
+        gap: 10px;
+        margin-top:30px;
+      }
+      #start {
+        margin-top: 20px;
+        width: 50%;
+        height: 30px;
+        background-color: brown;
+        color: bisque;
+        margin-left:9em;
+      }
+      input{
+        background-color: transparent;
+        border-radius: 5px;
+        outline: none;
+        color: rgb(43, 32, 15);
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+
+  <body >
+    <div style="display: flex; justify-content: center ;align-items: center;background-color: black;height:100; width: 100;">
+      <div style="border: 1px solid gray; border-radius: 10px; display: flex;flex-direction: column;justify-content: center;background:rgb(226, 214, 214);padding:10px; width: 35%;">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-top:-30px; 
+          "
+        >
+          <div>
+            <h3 id="player1" onclick="handlePlay1()">Player 1</h3>
+            <input type="text" placeholder="Enter name" id="name1">
+            <div style="border: 1px solid blue;margin-top: -45px;">
+           <span>HI</span>
+            </div>
+          </div>
+          <div>
+            <h3 id="player2" onclick="handlePlay2()" style="text-align: right;">Player 2</h3>
+            <input type="text" placeholder="Enter name" id="name2">
+            <div style="border: 1px solid blue;margin-top: -45px;">
+           <span>HI</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -20px;
+            gap: 100px;
+          "
+        >
+          <div>
+            <h2 id="me">Winner &#x1f973</h2>
+            <h2 id="you">Loser &#x1f494</h2>
+          </div>
+          
+          <div>
+            <h2 id="draw" style="margin-top: 10px; text-align: center"></h2>
+          </div>
+
+          <div>
+            <h2 id="me2">Winner &#x1f973</h2>
+            <h2 id="you1">Loser &#x1f494</h2>
+          </div>
+        </div>
+
+        <div id="container">
+          <div id="box1" onclick="play('one')"></div>
+          <div id="box2" onclick="play('two')"></div>
+          <div id="box3" onclick="play('three')"></div>
+          <div id="box4" onclick="play('four')"></div>
+          <div id="box5" onclick="play('five')"></div>
+          <div id="box6" onclick="play('six')"></div>
+          <div id="box7" onclick="play('seven')"></div>
+          <div id="box8" onclick="play('eight')"></div>
+          <div id="box9" onclick="play('nine')"></div>
+        </div>
+        <div>
+          <button id="start" onclick="Start()">START GAME</button>
+        </div>
+      </div>
+    </div>
+   
+    <script src="Tic.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:peru;
+    width: 100;
+    height: 100vh;
+    }
+#calculator{
+    background: gray;
+    border-radius: 15px;
+    padding:20px;
+    margin-top:5rem;
+    margin-bottom:5rem;
+}
+#calculator button{
+    border: 0;
+    outline: 0;
+    width: 3.5rem;
+    height: 2rem;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    font-size: 1.5rem;
+    color: #f3efef;
+    cursor: pointer;
+    margin: 1rem 0.6rem 0.6rem 0.6rem;
+
+}
+.carbox{
+    margin-top:-100px;
+    margin-bottom:-10px;
+}
+

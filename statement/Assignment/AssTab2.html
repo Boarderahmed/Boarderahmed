@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab 2</title>
+</head>
+
+<body>
+    <div id="showMyFaq" style="margin-top: 100px;">
+        <div id="container1">
+            <div id="paint" style="display: flex;justify-content:space-between;">
+                <div style=" display:block; color: brown; font-size: larger;font-weight: bold;" id="make1">How to
+                    make
+                    deposit?</div>
+                <button id="open1" onclick="pressMe('Enquiry')"
+                    style="background-color:black;border-radius:5px;color: whitesmoke;">open</button>
+            </div>
+            <div style="display:flex;flex-direction: column; color: black;margin-left: -50px;" id="biggy1">
+                <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px ;" id="dodo">
+                    <div id="mobile" onclick="pressMe('subset')">
+                        <h5 style="margin-left: 10px;" id="Dial">Dial *565# on you mobile
+                            phone.
+                        </h5>
+                    </div>
+                    <p style="margin-left: 10px;" id="para1">You can use your phone to dial *565*9# to
+                        make<br>deposit
+                        on your
+                        phone using USSD.</p>
+                </div>
+                <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px;">
+                    <h5 style="margin-left: 10px;" id="depo" onclick=App()>Use the deposit button the mobile app.
+                    </h5>
+                    <p style="margin-left: 10px;" id="para1i">On the mobile App a deposit<br>button is provided to
+                        make
+                        deposit
+                        to your wallet.</p>
+                </div>
+                <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px;">
+                    <h5 style="margin-left: 10px;" id="bank" onclick="mainBank">Go to the bank to make deposit.</h5>
+                    <p style="margin-left: 10px;" id="para1ii">Go to any KPAY branch nearby to make you deposit</p>
+                </div>
+                <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px;">
+                    <h5 style="margin-left: 10px;" id="POS" onclick="goPos">Go to the POS center to make deposit
+                    </h5>
+                    <p style="margin-left: 10px;" para1iii>Go to any POS center to make
+                        deposit.<br>You can go to any POS centre in your area to make
+                        deposit using the machine.</p>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div>
+            <div style="display: flex;justify-content: space-between;">
+                <div style="color: brown; font-size: larger;font-weight: bold;">How to make withdrawal?</div>
+                <button onclick="pressMe('Query')"id="open2">Open</button>
+            </div>
+            <div>
+                <div style="display:block; color: black;margin-left: -50px;"id="biggy2">
+                    <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px ;">
+                        <h5 style="margin-left: 10px;display: none;"id="dial2" onclick="pressMe('qSubset')">Dial *565# on you mobile phone.</h5>
+                        <p style="margin-left: 10px;display:none;" id="USSD">You can use your phone to dial *565*7# to make<br>deposit on
+                            your phone using USSD.</p>
+                    </div>
+                    <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px;">
+                        <h5 style="margin-left: 10px;">Use the deposit button the mobile app.</h5>
+                        <p style="margin-left: 10px;">On the mobile App a deposit<br>button is provided to make
+                            deposit to your wallet.</p>
+                    </div>
+                    <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px;">
+                        <h5 style="margin-left: 10px;">Go to the bank to make deposit.</h5>
+                        <p style="margin-left: 10px;">You can use your phone to dial *565*7# to
+                            make<br>deposit on your phone using USSD.</p>
+                    </div>
+
+                    <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px;">
+                        <h5 style="margin-left: 10px;">Go to the POS center to make deposit
+                        </h5>
+                        <p style="margin-left: 10px;">Go to any POS center to make
+                            deposit.<br>You can go to any POS centre in your area to make
+                            deposit using the machine.</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</body>
+<script>
+
+    open1.innerHTML = "open"
+    biggy1.style.display = "none"
+
+    para1.style.display = "none"
+    Dial.style.color = "black"
+
+   open2.innerHTML = "Open"
+    biggy2.style.display = "none"
+
+    function pressMe(yes) {
+        if (yes == "Enquiry") {
+            if (open1.innerHTML == 'open') {
+                biggy1.style.display = "block"
+                open1.innerHTML = "close"
+            } else {
+                biggy1.style.display = "none"
+                open1.innerHTML = "open"
+            }
+        } else if (open2.innerHTML=='Open') {
+            biggy2.style.display ="block"
+            open2.innerHTML="close"
+        }else{
+              biggy2.style.display ="none"
+            open2.innerHTML="Open"
+        }
+
+        //subset
+        if (yes == "subset") { 
+            para1.style.display = "block"
+            Dial.style.color = "green"
+        }else{
+            para1.style.display = "none"
+            Dial.style.color = "black"
+        } 
+    }
+
+</script>
+
+</html>
+
+
+<!-- <div style="display: flex;justify-content: space-between;">
+    <div style="color: brown; font-size: larger;font-weight: bold;">Withdrawal Successful</div>
+    <button onclick="Switch()">Open</button>
+</div>
+<div style="display:block; color: black;margin-left: -50px;">
+    <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px ;">
+        <h5 style="margin-left: 10px;" id="Dial3" onclick="Question()">Dial *565*11# on you mobile phone.
+        </h5>
+        <p style="margin-left: 10px;">You can use your phone to dial *565*11# to make<br>complain on
+            your phone using USSD.</p>
+    </div>
+    <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px;">
+        <h5 style="margin-left: 10px;" id="comp" onclick="Question()">Use the complain button on the mobile
+            app.</h5>
+        <p style="margin-left: 10px;">On the mobile App a complain button<br> is provided to check your
+            balance.</p>
+    </div>
+</div> -->
+<!-- 
+
+<div style="display: flex;justify-content: space-between;">
+    <div style="color: brown; font-size: larger;font-weight: bold;">How to check Account balance?</div>
+    <button onclick="Switch()">Open</button>
+</div>
+<div style=" display:block; color: black;margin-left: -50px;">
+    <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px ;">
+        <h5 style="margin-left: 10px;" id="Dial2" onclick="Question()">Dial *565*00# on you mobile phone.
+        </h5>
+        <p style="margin-left: 10px;">You can use your phone to dial *565*00# to make<br>deposit on
+            your phone using USSD.</p>
+    </div>
+    <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px;">
+        <h5 style="margin-left: 10px;" id="bal" onclick="Question()">Use the balance button the mobile app.
+        </h5>
+        <p style="margin-left: 10px;">On the mobile App a balance button<br> is provided to check your
+            balance.</p>
+    </div>
+    <hr>
+</div>
+</div> -->
+
+
+<!-- <div style="display: flex;justify-content: space-between;">
+                <div style="color: brown; font-size: larger;font-weight: bold;">Transaction Decline</div>
+                <button onclick="Switch()">Open</button>
+            </div>
+            <div style="display:block; color: black;margin-left: -50px;">
+                <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px;">
+                    <h5 style="margin-left: 10px;" id="use" onclick="Question()">Use the customer service button on the
+                        mobile app.</h5>
+                    <p style="margin-left: 10px;">On the mobile App a customer service button<br> is provided to
+                        make complain
+                        balance.</p>
+                </div>
+            </div>
+            <hr> -->

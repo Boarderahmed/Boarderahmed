@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: black;
+    color: white;
+}
+.Container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 10px 50px 50px 50px ;
+    border: 1px solid aquamarine;
+    border-radius: 20px;
+    background-color: aquamarine;
+    width: 90vw;
+    height: 20vh;
+    box-sizing: content-box;  
+}
+
+#detail{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    gap: 50px;
+    margin-top: -50px;
+    color:red;
+}
+#detail button{
+    background: rgb(223, 159, 159);
+    margin-top:50px;
+    border:1px solid transparent;
+    border-radius: 5px;
+    width: 10em;
+    height: 2em;
+    color:red;
+    padding: 5px;
+    font-size: large;
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+}
+.pamount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 900px;
+    margin: 10px 30px;
+    padding: 5px;
+}
+#info1{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 20px;
+}
+ .REdetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* History style */
+.top1{
+    display:flex;
+    flex-direction:row;
+    gap:100px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-color: white;
+    padding: 10px;
+    margin: -70px 50px;
+    height: 50vh;
+}
+.mtop{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+.aTop{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+.top1 p{
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-color: aqua;
+    height: 30px;
+    padding: 5px;
+}
+
+/* Settings */
+.setCon{
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    width: 95%;
+    height: 70vh;
+    margin: -70px 20px;
+}
+.settCon{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    border:1px solid transparent;
+    border-radius: 15px;
+    color: black;
+    cursor: pointer;
+}
+.settCon div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid transparent;
+    border-radius:10px ;
+    background-color: #75b0943f;
+    width: 60%;
+    margin: 20px -30px -5px 60px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+h4{
+    color: rgba(233, 150, 122, 0.674);
+}
+.settCon p{
+    text-align-last:center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:normal;
+    font-weight: 500;
+   
+}
+
+/* Accordion Styling */
+#accord{
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: white;
+    height: 100%;
+    width: 90%;
+    margin: -60px 60px;
+   
+}
+#accordCon{
+    display:none;
+    flex-direction: column;
+    gap: 30px;
+    justify-content:space-evenly;
+    font-size: medium;
+}
+#accord div{
+    display: flex;
+    flex-direction: rows;
+    justify-content: space-between;
+    color: black;
+    margin-top: 30px;
+}
+#accord p{
+    margin-left: 50px;
+    font-size: large;
+}
+#accord button{
+    color: rgb(226, 146, 27);
+    margin-right: 50px;
+    font-weight: 500;
+}
+#accord h5{
+    font-size: large;
+}

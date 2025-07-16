@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    box-sizing: border-box;
+}
+#container{
+    width: 52.5em;
+    margin-top: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    
+}
+#main-con{
+   position:relative;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    background-color:antiquewhite;
+    width: 40em;
+    height: 38em;
+    color:rgb(44, 11, 81, 0.5);
+    padding: 10px;
+    margin-left: 100px;
+       
+}
+.con2{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 3px;
+    margin-bottom: 5px;
+}
+input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    width: 300px;
+    height: 30px;
+    outline: none;
+    
+}
+#btn{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    cursor:pointer;
+    margin-top: 10px;
+}
+button{
+    color:red;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+.show{
+    background-color:rgb(204, 186, 186);
+    width: 40em;
+    height: 20em;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: 60px;
+    color: black;
+    font-size: large;
+  
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotes</title>
+    <link rel="stylesheet" href="Slider.css" />
+  </head>
+
+  <body>
+    <section style="display:flex; justify-content: center;align-items: center;margin: 3em;max-width:80em ;background-color:darkgray;height:30em;">
+      <div class="container">
+        <div>
+          <div id="slides"></div>
+          <div id="slider"></div>
+        </div>
+        <div class="btn">
+          <button onclick="handlePrevious()" id="prev-btn">Previous</button>
+          <button onclick="handleNext()" id="next-btn">Next</button>
+        </div>
+      </div>
+    </section>
+    <script>
+      const data = [
+        {
+          src: '<img  src="./picturee/Mathematics.jpeg" alt="">',
+          text: "This picture is a mathematics, Maths is a subject every student if scared bbbbbbbbbb bbbbbbb bbbggggggg",
+        },
+        {
+          src: '<img  src="./picturee/Maths2.jpg" alt=" ">',
+          text: "Kunle is cooking",
+        },
+        {
+          src: '<img  src="./picturee/DesMaths.jpeg" alt=" ">',
+          text: "Chelsea is a foolish club",
+        },
+      ];
+
+      let currentIndex = 0;
+      slides.innerHTML = data[currentIndex].src;
+      slider.innerHTML = data[currentIndex].text;
+
+      function handleNext() {
+        currentIndex = currentIndex += 1;
+        slides.innerHTML = data[currentIndex].src;
+        slider.innerHTML = data[currentIndex].text;
+      }
+
+      function handlePrevious() {
+        currentIndex = currentIndex -= 1;
+        slides.innerHTML = data[currentIndex].src;
+        slider.innerHTML = data[currentIndex].text;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- statement: "Ade is a boy"
+ statement: "Mr Kunle is cooking"
+ statement: "Chelsea is a foolish club", -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Slideshow</title>
+</head>
+<body>
+    <div id="quotes">
+        <span>
+            <img id="slide-image" src="" alt="Slide Image">
+        </span>
+        <p id="slide-text"></p>
+    </div>
+    <button onclick="handlePrevious()" id="previous">Previous</button>
+    <button onclick="handleNext()" id="next">Next</button>
+
+    <script>
+        const data = [
+            { image: './picturee/Mathematics.jpeg', text: "Ade is a boy" },
+            { image: './picturee/maths.jpg', text: "Kunle is cooking" },
+            { image: './picturee/DesMaths.jpeg', text: "Chelsea is a football club" } // Adjusted text for appropriate language
+        ];
+
+        let currentIndex = 0;
+
+        function updateSlide() {
+            const slideImage = document.getElementById("slide-image");
+            const slideText = document.getElementById("slide-text");
+
+            if (currentIndex >= 0 && currentIndex < data.length) {
+                slideImage.src = data[currentIndex].image;
+                slideText.innerHTML = data[currentIndex].text;
+            }
+        }
+
+        function handleNext() {
+            if (currentIndex < data.length - 1) {
+                currentIndex++;
+                updateSlide();
+            }
+        }
+
+        function handlePrevious() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlide();
+            }
+        }
+
+        // Initialize first slide
+        updateSlide();
+    </script>
+</body>
+</html> -->

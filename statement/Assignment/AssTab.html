@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="Ass2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="Container">
+        <div id="detail">
+            <div onclick="pressMe('transactions')">
+                <button id="Trans1">Transaction</button>
+            </div>
+            <div onclick="pressMe('history')">
+                <button id="Try">History</button>
+            </div>
+            <div onclick="pressMe('settings')">
+                <button id="Stn">Setting</button>
+            </div>
+            <!-- <div onclick="pressMe('questions')">
+                <button id="faq">FAQs</button>
+            </div> -->
+        </div>
+    </div>
+    <div id="showMyTransaction"
+        style="background-color: whitesmoke;color: black;margin: -60px 50px; border-radius: 15px;height: 100vh;margin-top: 30px;">
+        <div class="head">
+            <div class="pamount">
+                <h3><span style="color: crimson;font-family: Arial, Helvetica, sans-serif;">K</span>Pay</h3>
+                <p>Transaction Receipt</p>
+            </div>
+            <span
+                style="color: green;font-weight: bolder;font-size: x-large;margin-top: -10px;margin-bottom: 10px;">$10000</span>
+            <p style="margin-top:-5px;margin-bottom: 5px;">Successful</p>
+            <p style="font-size:x-small;color: rgb(14, 18, 18);margin-bottom: 10px;">Apr 20th, 2025 19:07:08</p>
+        </div>
+        <hr>
+        <div id="info1">
+            <div class="REdetails">
+                <p>Receipt Details</p>
+                <div>
+                    <p>ROKIBAT OMOSHALEWA SALAU</p>
+                    <p style="text-align: right;">KPAY| 8012345678</p>
+                </div>
+            </div>
+            <div class="REdetails">
+                <p>Sender Details</p>
+                <div>
+                    <p>KABIRU ADEJUMOBI AHMED</p>
+                    <p style="text-align: right;">OPAY | 809*****03</p>
+                </div>
+            </div>
+            <div class="REdetails">
+                <p>Remarks</p>
+                <div>
+                    <p>Hospital</p>
+                </div>
+            </div>
+            <div class="REdetails">
+                <p>Transaction Type</p>
+                <div>
+                    <p>Transfer to Bank Account</p>
+                </div>
+            </div>
+            <div class="REdetails">
+                <p>Transaction No.</p>
+                <div>
+                    <p>2357484939092883968943</p>
+                </div>
+            </div>
+            <div class="REdetails">
+                <p>Section ID</p>
+                <div>
+                    <p>10000097877266788286682786545</p>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center;margin-top: 60px;">Enjoy a better transaction with KPAY. <br>Get free transfers,
+            withdrawal, bill payments, instant loans,
+            and good annual interest on savings. <br>KPAY is licensed by the Central Bank of America and insured by the
+            NDIC</p>
+
+    </div>
+    <div id="showMyHistory" style="display: flex;margin-top: 90px;">
+        <div class="top1">
+            <div class="mtop">
+                <div id="cate" onclick="pressMe1('categories')"
+                    style="border:1px solid transparent; background-color:slategrey;border-radius: 15px; width:50%; color:black; padding: 5px;text-align:center;">
+                    All Categories
+                </div>
+                <div id="Catehide"
+                    style="display:grid;grid-template-columns:repeat(3,1fr); gap:10px; width:30em; color: black; text-align:center;margin-top:20px;cursor: pointer;">
+                    <p> All Categories</p>
+                    <p>Bank Deposit</p>
+                    <p>Transfer from</p>
+                    <p>Transfer to</p>
+                    <p>Airtime</p>
+                    <p>Betting</p>
+                    <p>SMS Subscription</p>
+                </div>
+            </div>
+            <div class="aTop">
+                <div
+                    style="border: 1px solid transparent;border-radius:15px;background-color:slategrey;width:30%;color:black;padding:5px;text-align: center;margin-left: 25px;">
+                    All Status
+                </div>
+                <div class="stathide"
+                    style="display:grid;grid-template-columns:repeat(3,1fr); gap:10px; width:30em; color: black; text-align:center;margin-top:20px;margin-left:25px;">
+                    <p> All Stat</p>
+                    <p>Successful</p>
+                    <p>Pending</p>
+                    <p>Failed</p>
+                    <p>To be Paid</p>
+                    <p>Reversed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="showMySettings" style="margin-top: 90px;">
+        <div class="setCon">
+            <span class="settCon">
+                <div>
+                    <h4>Reset your password</h4>
+                    <p>When you click on the "Reset your password"<br>a form where you will provide your email<br>will
+                        be displayed </p>
+                </div>
+                <div>
+                    <h4>Edit your profile</h4>
+                    <p>When you click on the "Edit your profile"<br>a form where you will re-enter your details<br>will
+                        be displayed </p>
+                </div>
+                <div>
+                    <h4>Upload picture</h4>
+                    <p>When you click on the "upload picture"<br>a form where you will have the<br>opportunity to upload
+                        your picture will be displayed </p>
+                </div>
+                <div>
+                    <h4>Contact Us </h4>
+                    <p>When you click on the "Contact Us" you will be redirected to a customer care. </p>
+                </div>
+            </span>
+        </div>
+    </div>
+    <div id="showMyFaq" style="margin-top: 100px;">
+        <div id="container1">
+            <div id="paint" style="display: flex;justify-content:space-between;">
+                <div style=" display:block; color: brown; font-size: larger;font-weight: bold;" id="make1">How to
+                    make
+                    deposit?</div>
+                <button id="open1" onclick="pressMe('Enquiry')"
+                    style="background-color:black;color:red;border-radius:5px;">Open</button>
+            </div>
+            <div style="display:flex;flex-direction: column; color: black;display:none;margin-left: -50px;" id="biggy1">
+                <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px ;" id="dodo">
+                    <h5 style="margin-left: 10px;" id="Dial" onclick="Question()">Dial *565# on you mobile phone.
+                    </h5>
+                    <p style="margin-left: 10px;" id="para1">You can use your phone to dial *565*9# to
+                        make<br>deposit
+                        on your
+                        phone using USSD.</p>
+                </div>
+                <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px;">
+                    <h5 style="margin-left: 10px;" id="depo" onclick=App()>Use the deposit button the mobile app.
+                    </h5>
+                    <p style="margin-left: 10px;" id="para1i">On the mobile App a deposit<br>button is provided to
+                        make
+                        deposit
+                        to your wallet.</p>
+                </div>
+                <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px;">
+                    <h5 style="margin-left: 10px;" id="bank" onclick="mainBank">Go to the bank to make deposit.</h5>
+                    <p style="margin-left: 10px;" id="para1ii">Go to any KPAY branch nearby to make you deposit</p>
+                </div>
+                <div style="display:flex;flex-direction: column;gap:10px; margin-left:50px;">
+                    <h5 style="margin-left: 10px;" id="POS" onclick="goPos">Go to the POS center to make deposit
+                    </h5>
+                    <p style="margin-left: 10px;" para1iii>Go to any POS center to make
+                        deposit.<br>You can go to any POS centre in your area to make
+                        deposit using the machine.</p>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <script src="Ass2.js"></script>
+</body>
+
+</html>

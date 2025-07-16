@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Ass.css">
+    <script src="Ass.js"></script>
+</head>
+
+<body>
+    <section id="container">
+        <div id="main-con">
+            <h1 style="margin-bottom: 20px; font-weight: bold;">Sign Up</h1>
+            <p style="margin-bottom:20px;font-size: large;">Please fill in the form to create an account.</p>
+
+            <div class="con2">
+                <div style="display:flex;flex-direction: column;gap:5px;margin-bottom:2px;">
+                    <label for="name"><b>First Name</b></label>
+                    <input type="text" placeholder="Enter First Name" id="fname">
+                    <div id="firstNameOutput"></div>
+                    <div id="firstNameOutput2"></div>
+                </div>
+                <div style="display:flex;flex-direction: column;gap:5px;margin-bottom:2px;">
+                    <label for="name"><b>Last Name</b></label>
+                    <input type="text" placeholder="Enter Last Name" id="lname">
+                    <div id="lastNameOutput"></div>
+                    <div id="lastNameOutput2"></div>
+                </div>
+
+                <div style="display:flex;flex-direction: column;gap:5px;margin-bottom: 2px;">
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" id="maily">
+                    <div id="emailyOutput"></div>
+                    <div id="emailyOutput2"></div>
+                </div>
+                <div style="display:flex;flex-direction: column;gap:5px;margin-bottom: 2px;">
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" id="pswd">
+                    <div id="passwordOutput"></div>
+                    <div id="passwordOutput2"></div>
+                </div>
+
+                <div style="display:flex;flex-direction: column;gap:5px;margin-bottom: 2px;">
+                    <label for="age"><b>Age</b></label>
+                    <input type="select" placeholder="Enter Age" id="dob">
+                    <div id="ageOutput"></div>
+                    <div id="ageOutput2"></div>
+                </div>
+            </div>
+            <div id="btn">
+                <button onclick="handleBtn()">Submit</button>
+                <div id="outputValue"
+                    style="margin-top:10px;border:1px solid transparent; border-radius: 5px; background-color:transparent;padding: 3px;color:green;font-size: larger; font-weight: bolder; ">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="show">
+        <div id="firstNameValue"></div>
+        <div id="lastNameValue"></div>
+        <div id="emailValue"></div>
+        <div id="secretValue"></div>
+        <div id="birthValue"></div>
+    </section>
+    <script>
+birthValue.innerHTML = " ";
+        function handleBtn() {
+            if (fname.value == "") {
+                firstNameOutput.innerHTML = '<span style="display:block;font-family: Arial, Helvetica, sans-serif;font-weight:light;font-size:small;font-style: italic;color:white;text-align:left;border:1px solid red;background:red;width:35%;margin-top:-5px;">Enter First Name</span>'
+                // firstNameOutput2.innerHTML = " "
+                outputValue.style.display = "none"
+
+            }
+            else if (fname.value !== "") {
+                firstNameOutput2.innerHTML = '<span style="display:block;font-family: Arial, Helvetica, sans-serif;font-weight:light;font-size:small;font-style: italic;color:black;text-align:left;background:rgb(86, 210, 86);width:25%;color:white;">Successful</span>'
+                firstNameOutput.innerHTML = " "
+
+            }
+
+            if (lname.value == "") {
+                lastNameOutput.innerHTML = '<span style="display:block;font-family: Arial, Helvetica, sans-serif;font-weight:light;font-size:small;font-style: italic;color:white;text-align:left;border:1px solid red;background:red;width:35%;margin-top:-5px;">Enter Last Name</span>'
+                //lastNameOutput2.innerHTML = " "
+                outputValue.style.display = "none"
+
+            }
+            else if (lname.value !== " ") {
+                lastNameOutput2.innerHTML = '<span style="display:block;font-family: Arial, Helvetica, sans-serif;font-weight:light;font-size:small;font-style: italic;color:black;text-align:left;background:rgb(86, 210, 86);width:25%;color:white;">Successful</span>'
+                lastNameOutput.innerHTML = " "
+            }
+
+            if (maily.value == "") {
+                emailyOutput.innerHTML = '<span style="display:block;font-family: Arial, Helvetica, sans-serif;font-weight:light;font-size:small;font-style: italic;color:white;text-align:left;border:1px solid red;background:red;width:35%;margin-top:-5px;">Enter your Email</span>'
+                // emailyOutput2.innerHTML = " "
+                outputValue.style.display = "none"
+            } else if (maily.value !== " ") {
+                emailyOutput2.innerHTML = '<span style="display:block;font-family: Arial, Helvetica, sans-serif;font-weight:light;font-size:small;font-style: italic;color:black;text-align:left;background:rgb(86, 210, 86);width:25%;color:white;">Successful</span>'
+                emailyOutput.innerHTML = " "
+            }
+
+            if (pswd.value == "") {
+                passwordOutput.innerHTML = '<span style="display:block; font-family: Arial, Helvetica, sans-serif;font-weight:light;font-size:small;font-style: italic;color:white;text-align:left;border:1px solid red;background:red;width:43%;margin-top:-5px;">Enter your Password</span>'
+                //passwordOutput2.innerHTML = " "
+                outputValue.style.display = "none"
+            } else if (pswd.value !== "") {
+                passwordOutput2.innerHTML = '<span style="display:block;font-family: Arial, Helvetica, sans-serif;font-weight:light;font-size:small;font-style: italic;color:black;text-align:left;background:rgb(86, 210, 86);width:25%;color:white;">Successful</span>'
+                passwordOutput.innerHTML = " "
+
+            }
+            if (dob.value == "") {
+                ageOutput.innerHTML = '<span style="display:block; font-family: Arial, Helvetica, sans-serif;font-weight:light;font-size:small;font-style: italic;color:white; text-align:left;border:1px solid red;background:red;width:30%;margin-top:-5px;">Enter your Age</span>'
+                // ageOutput2.innerHTML = ""
+                outputValue.style.display = "none"
+            } else if (dob.value !== "") {
+                ageOutput2.innerHTML = '<span style="display:block;font-family: Arial, Helvetica, sans-serif;font-weight:light;font-size:small;font-style: italic;color:black;text-align:left;background:rgb(86, 210, 86);width:25%;color:white;">Successful</span>'
+                ageOutput.innerHTML = " "
+            }
+
+            if (fname.value !== " " && lname.value !== " " && maily.value !== "" && pswd.value !== " " && dob.value !== " ") {
+                outputValue.style.display = "block"
+                outputValue.innerHTML = "Registration Successful"
+            }
+        
+            birthValue.innerHTML = birthValue.value;
+        firstNameValue.innerHTML = fname.value;
+        lastNameValue.innerHTML = lname.value;
+        emailValue.innerHTML = maily.value;
+        secretValue.innerHTML = pswd.value;
+        birthValue.innerHTML = dob.value;
+        
+            if (dob.value <= 10) {
+            birthValue.innerHTML = "child"
+            birthValue.style.display = "block"
+        }
+        else if (dob.value <= 18) {
+            birthValue.innerHTML = "teenager"
+            birthValue.style.display = "block"
+        }
+        else if (dob.value <= 39) {
+            birthValue.innerHTML = "youth"
+            birthValue.style.display = "block"
+        }
+        else if (dob.value <= 70) {
+            birthValue.innerHTML = "adult"
+            birthValue.style.display = "block"
+        } else if (dob.value <= 71) {
+            birthValue.innerHTML = "aged"
+            birthValue.style.display = "block"
+        }
+         
+    } 
+       
+       
+
+        //Age function
+
+         
+
+    </script>
+</body>
+
+</html>

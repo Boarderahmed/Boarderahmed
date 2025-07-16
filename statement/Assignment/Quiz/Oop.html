@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <div id="show"></div>
+    <div id="show1"></div>
+    <div id="show2"></div>
+
+    <div id="buttons"></div>
+    <button onclick="start()">Start</button>
+    <script>
+        //properties
+        class Car{
+        constructor(brand, color, model, year){
+            this.brand = brand;
+            this.color = color;
+            this.model = model;
+            this.year = year;
+        };
+
+    }
+    const toyota = new Car("Toyota","blue","camry",2020)
+    const benz = new Car("Benz","gray","GLE",2022)
+
+    const data=[];
+    const dataP=[];
+     dataP.push(`${toyota.brand} car is ${toyota.color}color and this model ${toyota.model} is build in ${toyota.year}`)
+     data.push(`${benz.brand} car is ${benz.color}color and this model ${benz.model} is build in ${benz.year}`)
+
+     for(element of data){
+        show.innerHTML = element
+     }
+     for(element of dataP){
+        show2.innerHTML = element
+     }
+
+     class Animal{
+        constructor(color, name, weight, gender, phylum){
+            this.color = color;
+            this.name = name;
+            this.weight = weight;
+            this.gender = gender;
+            this.phylum = phylum;
+        }
+     }
+     const chimpanzee = new Animal('black',"Chimp", 40, "male","chrodata")
+          const elements=[];
+      elements.push(`A ${chimpanzee.color} ${chimpanzee.name} is ${chimpanzee.weight} is ${chimpanzee.gender} family ${chimpanzee.phylum}`)
+
+    elements .forEach((element, index)=>{
+        show1.innerHTML =  elements
+     });
+const butter = [] // empty array to hold buttons
+
+const start = () => {
+  const container = document.getElementById("buttons")
+  container.innerHTML = "" // clear existing buttons
+
+  for (let i = 0; i < 10; i++) {  // declare 'i' here
+    const newButton = document.createElement("button") // create a button
+    newButton.innerText = i + 1 // set button text to 1, 2, 3, etc.
+    newButton.onclick = () => handleBtn(i) // handle click
+    newButton.style.margin = "4px" // optional spacing
+    butter.push(newButton) // add to array
+    container.appendChild(newButton) // show on page
+  }
+}
+
+function handleBtn(index) {
+  alert(`You clicked button ${index + 1}`)
+}
+
+
+    </script>
+</body>
+</html>

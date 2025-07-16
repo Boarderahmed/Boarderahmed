@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Hospital Management</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="bg-black font-family-Arial">
+    <div class="flex justify-center item-center text-center m-10 bg-green-200 shadow-lg">
+      <header class="flex justify-center item-center">
+        <h2 class="font-bold text-xl text-center p-2">Al-Husna Hospital Management</h2>
+      </header>
+    </div>
+    <div class="flex-col justify-center items-center bg-gray-300 h-100% w-80% p-2 ">
+      <div class="flex-column justify-center items-center text-center bg-blue-100 p-5 w-60% rounded hover:bg-green-300 ">
+        <h3 class="text-lg font-semibold">Add Patient:</h3>
+        <div
+          class="rounded h-10 w-full flex justify-center gap-15 items-center"
+        >
+          <input id="pat" type="text" placeholder="Patient's Name" class="text-center"/>
+          <input id="egg"
+            type="Number"
+            placeholder="Patient's Age"
+            class="text-center"
+          />
+        </div>
+        <div class="flex justify-center item-center">
+          <button
+            onclick="addPat()"
+            class="bg-green-300 border-none text-red text-semibold text-center rounded mt-5 h-10 p-2 hover:bg-violet-300"
+          >
+            Add Patient:
+          </button>
+        </div>
+      </div>
+
+      <div class="flex-column justify-center items-center text-center mt-20 bg-blue-100 p-5 w-60% rounded hover:bg-green-300">
+        <h3 class="text-lg font-semibold">Add Doctor</h3>
+        <div
+          class="rounded h-10 w-full flex justify-center gap-15 items-center"
+        >
+          <input type="text" placeholder="Doctor's Name" class="text-center" id="dame"/>
+          <input type="text" placeholder="specialty" class="text-center" id="dsame"/>
+        </div>
+        <div class="flex justify-center item-center">
+          <button
+            onclick="addDoc()"
+            class="bg-green-300 border-none text-red text-semibold text-center rounded mt-5 h-10 p-2 hover:bg-violet-300"
+          >
+            Add Doctor:
+          </button>
+        </div>
+      </div>
+
+       <div class="flex-column justify-center items-center mb-20 mt-20 bg-blue-100 p-5 w-60% rounded hover:bg-green-300 shadow-lg">
+          <h3 class="text-center text-lg font-semibold mb-10">Book Appointment</h3>
+          <div class="flex justify-center items-center gap-20">
+              <div>
+              <select id="setpat"></select>
+            </div>
+            <div>
+              <select id="setDoc"></select>
+            </div>
+            <div>
+                <input type="date" placeholder="Appointment Date" class="text-center" id="apptDitto"/>
+            </div>
+          </div>
+            <div class="flex justify-center items-center mt-5">
+              <button onclick="book()" class="bg-green-300 p-2 rounded hover:bg-violet-300">Book Appointment</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="flex justify-between items-center bg-blue-200 p-5">
+        <div class="text-center ">
+        <h3>Patients</h3>
+        <ul id="patlist"></ul>
+        <hr> 
+      </div>
+      <div class="text-center">
+        <h3>Doctors</h3>
+        <ul id="doclist"></ul>
+      </div>
+      <div class="text-center">
+        <h3>Appointments</h3>
+        <ul id="appointment"></ul>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </body>
+</html>

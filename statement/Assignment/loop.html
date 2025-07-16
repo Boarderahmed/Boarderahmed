@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="loop.css">
+</head>
+
+<body>
+    <!-- Code begins -->
+    <header>
+        <marquee>
+            <h2>These are list of things I want to do from Monday to Friday</h2>
+        </marquee>
+        <p style="color: brown; text-align: center; font-size: large;">You can enter your list anytime to update your TO
+            DO LIST everyday</p>
+    </header>
+    <div class="container">
+        <div class="main-con">
+            <input placeholder="type your todo" id="todo" /><br /><br />
+            <button onclick="btn()" id="tondo">ADD TODO</button>
+            <button onclick="btn1()" id="Update">UPDATE</button>
+
+            <div id="show">
+
+            </div>
+            <button onclick="handleSave()">SAVE</button>
+        </div>
+
+
+        <!-- javascript -->
+        <script>
+            Update.style.display = "none"
+            Update.style.backgroundColor = "red"
+            let todoData = []
+            let editIndex;
+
+            function btn() {
+
+                if (todo.value == "") {
+                    show.innerHTML = ""
+                }
+                else {
+                   todoData.push(todo.value)
+                   show.innerHTML = " ";
+                    localStorage.setItem("todo", JSON.stringify(todoData))
+                    console.log(todoData)
+                    for (let i = 0; i < todoData.length; i++) {
+                        show.innerHTML += `<div><input type="checkbox" onclick="Tick()" id="tick"/>${i + 1}. ${todoData[i]}<button onclick="handleDel(${i})">Delete</button><button onclick="handleEdit(${i})">Edit</button></div>`
+                    }
+                }
+                 todo.value = ""
+
+            }
+            function handleDel(index) {
+                localStorage.setItem("todo", JSON.stringify(todoData))
+                show.innerHTML = " ";
+                todoData.splice(index, 1)
+                console.log(todoData)
+                for (let i = 0; i < todoData.length; i++) {
+                    show.innerHTML += `<div><input type="checkbox"  onclick="Tick()" id="tick"/>${i + 1}. ${todoData[i]}<button onclick="handleDel(${i})">Delete</button><button onclick="handleEdit(${i})">Edit</button></div>`
+                }
+
+            }
+
+            function handleEdit(index) {
+                localStorage.setItem("todo", JSON.stringify(todoData))
+                editIndex = index
+                todo.value = todoData[index]
+                Update.style.display = "block"
+                Update.style.backgroundColor = "red"
+                tondo.style.display = "none"
+            }
+            function btn1() {
+                localStorage.setItem("todo", JSON.stringify(todoData))
+                todoData[editIndex] = todo.value
+                show.innerHTML = " "
+                Update.style.display = "none"
+                tondo.style.display = "block"
+                for (let i = 0; i < todoData.length; i++) {
+                    show.innerHTML += `<div><input type="checkbox" onclick="Tick()" id="tick"/>${i + 1}. ${todoData[i]}<button onclick="handleDel(${i})">Delete</button><button onclick="handleEdit(${i})">Edit</button></div>`
+                }
+            }
+            function getTodo() {
+                todoData = JSON.parse(localStorage.getItem("todo"))
+                for (let i = 0; i < todoData.length; i++) {
+                    show.innerHTML += `<div><input type="checkbox" onclick="Tick()" id="tick"/>${i + 1}. ${todoData[i]}<button onclick="handleDel(${i})">Delete</button><button onclick="handleEdit(${i})">Edit</button></div>`
+                }
+                
+            } getTodo()
+            
+            // function Tick(index) {
+            //     localStorage.setItem("todo", JSON.stringify(todoData))
+            //     if (todoData[index] == tick.value) {
+            //         show.style.textDecoration = "line-through"
+            //     }
+            //     else if (todoData[index] == tick.value) {
+            //         show.style.textDecoration = "none "
+            //     }
+
+            // }
+
+
+
+        </script>
+    </div>
+</body>
+
+</html>
+
+// <!-- show.innerHTML+= `<div>${i+1}. $todoData[i].todo.value<button onclick="handleDel(${i})">Delete</button><button
+//         onclick="handle(${i})">Edit</button></div>` -->
+
+<!-- // function handleChange(index){
+            //     let newTodo = changy.value;
+            //      if(index !== null){
+            //         todoData[index]=newTodo;
+            //         changy.value = newTodo
+            //     }
+            // } -->

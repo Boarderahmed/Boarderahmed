@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Saver</title>
+    <link rel="stylesheet" href="note.css" />
+  </head>
+  <body>
+    <!-- Code begins -->
+    <div
+      style="text-align: center; color: rgb(67, 144, 211); margin-top: 50px"
+    >
+      <h2 style="font-size: xx-large">
+        This app gives you the chance to update notes from different subjects
+      </h2>
+      <h4
+        style="
+          color: rgb(220, 14, 14);
+          text-align: center;
+          font-size: larger; 
+          margin-top: 2em;
+        "
+      >
+        Enter your notes here so you can save them for future use.
+      </h4>
+    </div>
+    <div class="container">
+      <div class="main-con">
+        <textarea
+          id="note"
+          style="
+            height: 10em;
+            width: 80%;
+            margin-top: 30px;
+            border: 1px solid transparent;
+            outline: none;
+          "
+        ></textarea
+        ><br /><br />
+        <div style="display: flex; flex-direction: column">
+          <button
+            onclick="btn()"
+            id="tondo"
+            style="
+              width: 100px;
+              height: 30px;
+              color: bisque;
+              font-weight: bold;
+              background-color: rgb(97, 181, 97);
+              border: 1px solid gray;
+              border-radius: 2px;
+              margin-top:-2em;
+            "
+          >
+            ADD NOTE
+          </button>
+          <button
+            onclick="btn1()"
+            id="Update"
+            style="
+              width: 100px;
+              height: 30px;
+              color: bisque;
+              font-weight: bold;
+              background-color: red;
+              border: 1px solid gray;
+              border-radius: 2px;
+            "
+          >
+            UPDATE
+          </button>
+        </div>
+
+        <div id="show"></div>
+        <div
+          id="Modal"
+        >
+        <div>
+          <span id="notedetails"></span>
+        </div>
+          <button
+            onclick="handleClose()"
+            class="bg-red-400 hover:bg-gray-500 text-white p-2 rounded w-full cursor-pointer"
+          >
+            CLOSE
+          </button>
+        </div>
+
+        <input type="text" style="display: none" id="change" />
+        <button onclick="handleSave()" style="margin-top: em;width: 10em; color:black;background: rgb(194, 127, 39);border: 1px solid transparent;border-radius: 2px; padding: 5px; font-weight: bold;">SAVE</button>
+      </div>
+      <script src="note.js"></script>
+    </div>
+  </body>
+</html>

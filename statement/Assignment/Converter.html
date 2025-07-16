@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter App</title>
+    <link rel="stylesheet" href="Converter.css">
+</head>
+
+<body>
+    <section>
+        <div class="row">
+            <div>
+                <h4>CONVERTER APP</h4>
+            </div>
+            <div class="container">
+                <div class="con-items">
+                    <select id="items" onclick="handleSelect()">
+                            <option value="Unit">Unit</option>
+                            <option value="Temperature">Temperature</span></option>
+                            <option value="Length">Length</option>
+                            <option value="Time">Time</option>
+                            <option value="Currency">Currency</option>
+                            <option value="Weight">Weight</option>
+                            <option value="Volume">Volume</option>
+                            <option value="Volume">Energy</option>
+                    </select>
+                </div>
+
+                <!-- Units to convert code -->
+                <div class="basic">
+                    <div id="unit1" style="display:none;">
+                        <select id="tempOne">
+                            <option value="fahrenheit">fahrenheit</option>
+                            <option value="kelvin">kelvin</option>
+                            <option value="celsius">celsius</option>
+                        </select>
+                        <select id="tempTwo">
+                            <option value="fahrenheit">fahrenheit</option>
+                            <option value="kelvin">kelvin</option>
+                            <option value="celsius">celsius</option>
+                        </select>
+                    </div>
+                    <div id="unit2" style="display:none;">
+                        <select id="lent1">
+                            <option value="km">km</option>
+                            <option value="cm">cm</option>
+                            <option value="m">m</option>
+                        </select>
+                        <select id="lent2">
+                            <option value="km">km</option>
+                            <option value="cm">cm</option>
+                            <option value="m">m</option>
+                        </select>
+                    </div>
+                    <div id="unit3" style="display:none;">
+                        <select id="time1">
+                            <option value="hr">hr</option>
+                            <option value="min">min</option>
+                            <option value="sec">sec</option>
+                        </select>
+                        <select id="time2">
+                            <option value="hr">hr</option>
+                            <option value="min">min</option>
+                            <option value="sec">sec</option>
+                        </select>
+                    </div>
+                    <div id="unit4" style="display:none;">
+                        <select id="Currency1">
+                            <option value="Naira">Naira</option>
+                            <option value="Dollar">Dollar</option>
+                            <option value="Euro">Euro</option>
+                        </select>
+                        <select id="Currency2">
+                            <option value="Naira">Naira</option>
+                            <option value="Dollar">Dollar</option>
+                            <option value="Euro">Euro</option>
+                        </select>
+                    </div>
+                    <div id="unit5" style="display:none;">
+                        <select id="Mass1">
+                            <option value="kg">kg</option>
+                            <option value="gm">gm</option>
+                            <option value="ton">ton</option>
+                        </select>
+                        <select id="Mass2">
+                            <option value="kg">kg</option>
+                            <option value="gm">gm</option>
+                            <option value="ton">ton</option>
+                        </select>
+                    </div>
+                    <div id="unit6" style="display:none;">
+                        <select id="Volume1">
+                            <option value="kl">kl</option>
+                            <option value="ml">ml</option>
+                            <option value="l">l</option>
+                        </select>
+                        <select id="Volume2">
+                            <option value="kl">kl</option>
+                            <option value="ml">ml</option>
+                            <option value="l">l</option>
+                        </select>
+                    </div>
+                    <div id="unit6" style="display:none;">
+                        <select id="Energy1">
+                            <option value="j">j</option>
+                            <option value="kj">kj</option>
+                            <option value="mj">mj</option>
+                            <option value="gj">gj</option>
+                            <option value="wh">wh</option>
+                            <option value="kw">kw</option>
+                            <option value="cal">cal</option>
+                            <option value="kcal">kcal</option>
+                        </select>
+                        <select id="Energy2">
+                            <option value="j">j</option>
+                            <option value="kj">kj</option>
+                            <option value="mj">mj</option>
+                            <option value="gj">gj</option>
+                            <option value="wh">wh</option>
+                            <option value="kw">kw</option>
+                            <option value="cal">cal</option>
+                            <option value="kcal">kcal</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- result code -->
+                <div id="grade">
+                    <div id="num">
+                        <div class="number">
+                            <input type="number" placeholder="Enter number" id="typeNumber">
+                        </div>
+                        <span class="text-center">
+                            <b id="uni1"></b>
+                        </span>
+                    </div>
+                    <div id="num">
+                        <div id="rest">
+                            <div id="result">
+
+                            </div>
+                        </div>
+
+
+                        <span class="text-center">
+                            <b id="uni2"></b>
+                        </span>
+                    </div>
+                    <div>
+                        <button onclick="convert()" id="dave">Convert</button>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 20em;text-align: center;">
+                <p>@ Olaide 2025</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        unit1.style.display = "none"
+        unit2.style.display = "none"
+        unit3.style.display = "none"
+        unit4.style.display = "none"
+        unit5.style.display = "none"
+        unit6.style.display = "none"
+        function handleSelect() {
+            if (items.value == "Temperature") {
+                unit1.style.display = "block"
+                unit2.style.display = "none"
+                unit3.style.display = "none"
+                unit4.style.display = "none"
+                unit5.style.display = "none"
+                unit6.style.display = "none"
+            }
+            else if (items.value == "Length") {
+                unit1.style.display = "none"
+                unit2.style.display = "block"
+                unit3.style.display = "none"
+                unit4.style.display = "none"
+                unit5.style.display = "none"
+                unit6.style.display = "none"
+            } else if (items.value == "Time") {
+                unit1.style.display = "none"
+                unit2.style.display = "none"
+                unit3.style.display = "block"
+                unit4.style.display = "none"
+                unit5.style.display = "none"
+                unit6.style.display = "none"
+            } else if (items.value == "Currency") {
+                unit1.style.display = "none"
+                unit2.style.display = "none"
+                unit3.style.display = "none"
+                unit4.style.display = "block"
+                unit5.style.display = "none"
+                unit6.style.display = "none"
+            } else if (items.value == "Weight") {
+                unit1.style.display = "none"
+                unit2.style.display = "none"
+                unit3.style.display = "none"
+                unit4.style.display = "none"
+                unit5.style.display = "block"
+                unit6.style.display = "none"
+            } else if (items.value == "Volume") {
+                unit1.style.display = "none"
+                unit2.style.display = "none"
+                unit3.style.display = "none"
+                unit4.style.display = "none"
+                unit5.style.display = "none"
+                unit6.style.display = "block"
+            } else if (items.value == "Unit") {
+                unit1.style.display = "none"
+                unit2.style.display = "none"
+                unit3.style.display = "none"
+                unit4.style.display = "none"
+                unit5.style.display = "none"
+                unit6.style.display = "none"
+            }
+        }
+        function convert() {
+            result.innerHTML = typeNumber.value
+
+            //Temperature...//
+            if (tempOne.value == "fahrenheit" && tempTwo.value == "kelvin") {
+                result.innerHTML = eval(typeNumber.value - 32) * 0.556 + 273.15
+            }
+            else if (tempOne.value == "fahrenheit" && tempTwo.value == "celsius") {
+                result.innerHTML = eval(typeNumber.value - 32) * 0.556
+            } else if (tempOne.value == "kelvin" && tempTwo.value == "fahrenheit") {
+                result.innerHTML = eval(typeNumber.value - 273.15) * 1.8 + 32
+            } else if (tempOne.value == "kelvin" && tempTwo.value == "celsius") {
+                result.innerHTML = eval(typeNumber.value - 273.15)
+            } else if (tempOne.value == "celsius" && tempTwo.value == "fahrenheit") {
+                result.innerHTML = eval(typeNumber.value * 1.8) + 32
+            } else if (tempOne.value == "celsius" && tempTwo.value == "kelvin") {
+                result.innerHTML = eval(typeNumber.value) + 273.15
+            }
+
+            //Length...//
+
+            else if (lent1.value == "km" && lent2.value == "cm") {
+                result.innerHTML = eval(typeNumber.value * 100000)
+            } else if (lent1.value == "km" && lent2.value == "m") {
+                result.innerHTML = eval(typeNumber.value * 1000)
+            } else if (lent1.value == "cm" && lent2.value == "km") {
+                result.innerHTML = eval(typeNumber.value / 100000)
+            } else if (lent1.value == "cm" && lent2.value == "m") {
+                result.innerHTML = eval(typeNumber.value / 100)
+            } else if (lent1.value == "m" && lent2.value == "km") {
+                result.innerHTML = eval(typeNumber.value / 1000)
+            } else if (lent1.value == "m" && lent2.value == "cm") {
+                result.innerHTML = eval(typeNumber.value * 100)
+            }
+
+            //Time...//
+
+            else if (time1.value == "hr" && time2.value == "min") {
+                result.innerHTML = eval(typeNumber.value * 60)
+            } else if (time1.value == "hr" && time2.value == "sec") {
+                result.innerHTML = eval(typeNumber.value * 3600)
+            } else if (time1.value == "min" && time2.value == "hr") {
+                result.innerHTML = eval(typeNumber.value / 60)
+            } else if (time1.value == "min" && time2.value == "sec") {
+                result.innerHTML = eval(typeNumber.value * 60)
+            } else if (time1.value == "sec" && time2.value == "hr") {
+                result.innerHTML = eval(typeNumber.value / 3600)
+            } else if (time1.value == "sec" && time2.value == "min") {
+                result.innerHTML = eval(typeNumber.value / 60)
+            }
+
+
+
+            //Energy..//
+            // else if(time1.value == "j" && time2.value == "kj "){
+            //       result.innerHTML =eval(typeNumber.value * 60)
+            // }else if ( time1.value == "hr" && time2.value =="sec"){
+            //     result.innerHTML = eval(typeNumber.value *3600)
+            // }else if ( time1.value == "min" && time2.value =="hr"){
+            //     result.innerHTML = eval(typeNumber.value / 60)
+            // }else if ( time1.value == "min" && time2.value =="sec"){
+            //     result.innerHTML = eval(typeNumber.value * 60)
+            // }else if ( time1.value == "sec" && time2.value =="hr"){
+            //     result.innerHTML = eval(typeNumber.value / 3600)
+            // }else if ( time1.value == "sec" && time2.value =="min"){
+            //     result.innerHTML = eval(typeNumber.value /60) 
+            // }else if ( time1.value == "sec" && time2.value =="min"){
+            //     result.innerHTML = eval(typeNumber.value /60) 
+            // }else if ( time1.value == "sec" && time2.value =="min"){
+            //     result.innerHTML = eval(typeNumber.value /60) 
+            // }else if ( time1.value == "sec" && time2.value =="min"){
+            //     result.innerHTML = eval(typeNumber.value /60) 
+            // }
+
+            //Empty
+
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

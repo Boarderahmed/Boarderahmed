@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+  </head>
+  <body>
+    <div class="flex justify-center items-center h-screen mb-4">
+      <div class="bg-green-100 p-8 rounded-lg shadow-lg text-center mb-10">
+        <h1 class="text-4xl font-bold mb-6">BUDGET APP</h1>
+        <div class="text-l mb-2 flex-col justify-center items-center gap-2" onclick="bot()">
+          TOTAL BUDGET:<span class="text-2xl font-semibold text-green-500 ml-2"
+            ><span id="totalBudget"></span
+          ></span>
+          <input type="number" placeholder="Enter Budget" id="bud">
+        </div>
+        <div class="flex justify-between gap-6 mt-4">
+          <div>
+            TOTAL SPENT:<span class="text-2xl font-semibold text-gray-500 ml-2"
+              ><span id="totalSpent"></span
+            ></span>
+          </div>
+          <div>
+            TOTAL REMAIN:<span class="text-2xl font-semibold text-red-500 ml-2"
+              ><span id="totalRemain"></span
+            ></span>
+          </div>
+        </div>
+        <div>
+          <input
+            id="amount"
+            type="number"
+            placeholder="Enter Amount"
+            class="mt-4 p-2 border border-gray-300 rounded w-full"
+          />
+          <input
+            id="purpose"
+            type="text"
+            placeholder="Purpose"
+            class="mt-4 p-2 border border-gray-300 rounded w-full"
+          />
+          <button
+            type="submit"
+            onclick="Budget()"
+            class="mt-2 bg-orange-500 text-white font-bold p-2 rounded w-full"
+          >
+            Enter Budget
+          </button>
+        </div>
+        <div class="bg-gray-200 mt-4 rounded">
+          <h3 class="text-lg">Budget History</h3>
+          <hr>
+          <div id="top" class="relative flex justify-center p-4">
+        <table class="border border-gray-200 text-center text-sm min-w-full">
+            <thead class="text-gray-700 bg-gray-100">
+                <tr>
+                    <th class="px-4 py-2 border-b">S/N</th>
+                    <th class="px-4 py-2 border-b">AMOUNT</th>
+                    <th class="px-4 py-2 border-b">PURPOSE</th>
+                </tr>
+            </thead>
+            <tbody id="show">
+            </tbody>
+        </table>
+    </div>
+        </div>
+      </div>
+    </div>
+     
+    <script src="Budget.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  </body>
+</html>

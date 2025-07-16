@@ -1,0 +1,130 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin:0;
+}
+body{
+    background: burlywood;
+    box-sizing: border-box;
+}
+.row{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;;
+    position: relative;
+    background:rgb(136, 226, 136);
+    margin: 3.5em 4em 25em 28em;
+    border: 5px solid grey;
+    border-radius: 20px;
+    width:25em;
+    height: 27em;
+    text-align: center;
+    cursor: pointer;
+}
+.container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap:30px;
+    margin:5rem 5rem 5rem 3.5rem;
+    cursor: pointer;
+}
+h4{
+    position: relative;
+    margin:1rem -6rem;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+    
+}
+
+#items{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    margin-top: -25px;
+    margin-bottom: 4em;
+    margin-left: -11.6em;
+    width: 25em;
+    height: 2.5em;
+    text-align: center !important;
+    padding: 5px; 
+}
+
+.basic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    gap:10px;
+    margin-left: 2em;
+}
+.basic select{
+    height:2em;
+}
+#grade{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+    
+}
+#grade input{
+    height:1.5em;
+    width:15.5em;
+    margin-top: -10em;
+    margin-left:1em;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: large;
+}
+.number input{
+    text-align: center !important;
+}
+#rest{
+    position:absolute;
+    background-color:white;
+    height:2em;
+    width:13em;
+    margin-top: -1em;
+    margin-left:-6em;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    text-align: center;   
+}
+#result{
+    margin-top: 8px;
+}
+button{
+    width:6em;
+    height:3em;
+    background-color: brown;
+    border: 1px soild transparent;
+    border-radius: 2px;
+    margin-left:2em;
+    color: azure;
+    cursor: pointer;
+}
+.row:hover{
+    background-color: rgba(164, 20, 20, 0.5);
+    color:grey(241, 9, 9);
+      box-shadow: 8px -8px 8px;
+}
+button:hover{
+        background-color: bisque;
+        color:red;
+}
+#result:hover{
+    background-color: bisque;
+}

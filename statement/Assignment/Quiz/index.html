@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body
+    class="flex justify-center items-center font-family-Arial padding-20px bg-orange-200"
+  ></body>
+
+    <div
+      id="quiz-box"
+      class="flex-col justify-center items-center w-180 mt-7 border border-transparent p-20px bg-black h-full rounded"
+    >
+      <div
+        class="text-white flex justify-center items-center ml-15 cursor-pointer max-w-[600px]"
+      >
+        <div
+          id="Starty"
+          class="text-white flex-column justify-center items-center m-10 border border-gray h-40 rounded shadow-lg bg-blue-400"
+        >
+          <p class="mt-5 p-3 font-bold">
+            Click on the start button below to start the TEST
+          </p>
+          <button
+            onclick="handleStart()"
+            class="border border-#ccc bg-white ml-33 mt-5 text-purple-400 font-bold p-2 w-30 rounded shadow-lg cursor-pointer bg-white"
+          >
+            START
+          </button>
+        </div>
+
+        <div
+          id="testy"
+          class="text-white flex justify-center items-center bg-green-500 p-5 w-150 h-full ml-2 mt-10 prounded shadow-lg"
+        >
+        <div id="down">
+ 
+</div>
+          <div>
+            <div
+              id="question"
+              class="font-semibold mb-10px text-black text-center"
+            ></div>
+            <div
+              id="options"
+              class="flex flex-col gap-2 font-25px my-5 mx-0 text- cursor-pointer text-center"
+            ></div>
+          </div>
+
+          <div class="flex justify-between mt-10 " id="nav">
+            <button
+              onclick="previousQuestion()"
+              class="text-black font-semibold border border-gray rounded p-1 w-20 h-8 text-middle bg-gray-300 shadow-lg cursor-pointer mt-2"
+            >
+              Previous
+            </button>
+            <div id="buttons" class="flex gap-1 text-center">
+
+            </div>
+            <button
+              onclick="nextQuestion()"
+              class="text-black font-semibold border border-gray rounded p-1 w-15 h-8 text-middle bg-gray-300 shadow-lg cursor-pointer mt-2.5"
+            >
+              Next
+            </button>
+          </div>
+
+          <div
+            id="modal"
+            class="flex-col justify-center items-center bg-black text-center text-white border border-transparent mt-5 p-5 font-18px"
+          >
+            <p class="text-center font-25px text-red-500">
+              "You have answered all the test questions,<br/>if you need to
+              preview your answers press<br />"Previous Button" or click
+              "Submit" to submit"
+            </p>
+          </div>
+
+          <div class="flex justify-center items-center">
+            <button
+              id="sub"
+              onclick="Submit()"
+              class="text-black font-semibold border border-gray rounded p-2 w-30 mt-10 ml-6 text-middle bg-green-300 shadow-lg cursor-pointer"
+            >
+              SUBMIT
+            </button>
+          </div>
+
+          <div class="flex justify-center">
+            <button id="fin"
+              onclick="finish()"
+              class="text-black font-semibold border border-gray rounded p-2 w-30 mt-10 ml-6 text-middle bg-red-300 shadow-lg cursor-pointer"
+            >
+              FINISH
+            </button>
+          </div>
+
+          <div
+            id="quest"
+            class="flex-col justify-center items-center mt-15 mr-5"
+          >
+         <div class="block justify-center ml-5">
+               <h1 class="text-center mb-10 text-red-500" id="autho">
+              Thank you for taking the test.<br />Are you sure you want to
+              EXIT<br />Clicking "YES" will submit your test automatically.<br />You
+              can return to test questions to continue
+            </h1>
+         </div>
+
+         <div class="flex justify-center items-center mr-3">
+               <button id="hey"
+              onclick="handleYes()"
+              class="text-black font-semibold border border-gray rounded p-2 w-30 mb-6 ml-15 text-middle bg-blue-300 shadow-lg cursor-pointer"
+            >
+              YES
+            </button>
+
+             <button id="can"
+              onclick="handleCancel()"
+              class="text-black font-semibold border border-gray rounded p-2 w-30 mb-6 ml-15 text-middle bg-blue-300 shadow-lg cursor-pointer"
+            >
+              CANCEL
+            </button>
+         </div>
+
+          </div>
+        </div>
+
+        <div id="subt" class="flex-col justify-center items-center mt-15 mr-5">
+          <h1 class="text-center mb-10">
+            Thank you for taking the test<br />click "RESULT" to see your score
+          </h1>
+          <button
+            onclick="result()"
+            class="text-black font-semibold border border-gray rounded p-2 w-30 mb-6 ml-15 text-middle bg-blue-300 shadow-lg cursor-pointer"
+          >
+            RESULT
+          </button>
+        </div>
+
+        <div
+          id="resulty"
+          class="flex-col justify-center items-center font-18px mt-20px font-bold text-green-500 flex"
+        >
+          <div
+            id="display"
+            class="flex font-bold text-green-500 mt-5 text-center"
+          ></div>
+          <div class="flex justify-center items-center mt-10">
+            <button
+              id="closey"
+              onclick="handleClose()"
+              class="text-black font-semibold border border-gray rounded p-2 w-30 mb-10 text-middle bg-red-300 shadow-lg cursor-pointer"
+            >
+              CLOSE
+            </button>
+          </div>
+        </div>
+        <div
+          class="flex justify-center items-center font-bold text-xl text-center"
+          id="you"
+        >
+          <h2 class="flex justify-center text-center">Thank you!</h2>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+</head>
+
+<body>
+    <input type="time" id="alarmTime">
+    <button id="setAlarm" onclick="setAlarm()">Set Alarm</button>
+    <div>
+        <audio controls autoplays id="alarmAudio" >
+            <source src="./Media/Asake_Lonely_At_The_Top_9jaflaver.com_.mp3">
+            <source src="./Media/Asake_Lonely_At_The_Top_9jaflaver.com_.mp3">
+        </audio>
+    </div>
+    <script>
+        let alarmTimeInput = alarmTime.value;
+        let setAlarmButton = setAlarm.innerHTML;
+        let alarmSound = alarmAudio.src="./Media/Asake_Lonely_At_The_Top_9jaflaver.com_.mp3";
+        let alarmSet = false;
+
+        function setAlarm() {
+            let alarmTime = alarmTimeInput.value;
+           let [hours, minutes] = alarmTimeInput.split(":");
+            let alarmHour = parseInt(hours);
+            let alarmMinute = parseInt(minutes);
+
+            setInterval(checkTime, 1000)
+          
+        }setAlarm();
+          
+        function checkTime() {
+                let initial = new Date();
+                let currentHour = initial.getHours();
+                let currentMinute = initial.getMinutes();
+
+                if (currentHour == alarmHour && currentMinute == alarmMinute && !alarmSet) {
+                    alert("alarmSound.play()")
+                    alarmSound.play();
+                    alarmSet = true;
+
+                }
+            } 
+
+
+
+    </script>
+</body>
+
+</html>

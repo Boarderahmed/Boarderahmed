@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Javascript time</h1>
+    <div id="timer">
+        
+    </div>
+    <div id="times">
+
+    </div>
+
+    <script>
+     
+
+        //  let getDate = new Date();
+        // alert (getDate)
+
+        timer.innerHTML= 0
+         let num = 0;
+        function handleTimer() {
+            num += 1
+             timer.innerHTML = num
+            if (num == 30) {
+                timer.innerHTML = "<p style='color:green;text-align:center;font-size:xx-large;margin:300px;'>UBANKA</p>"
+            }
+         }
+         setInterval(handleTimer, 1000)
+        //Self-practice//
+
+        //const getDate = new Date()
+        //const getDate = new Date("2026-03-25")
+
+        //Date string//
+        //const laide = new Date("December 05, 2025 11:15:27")
+
+        //Date
+        //const laide = new Date(2024,11,8,21,5,4,0)
+        //You can use date string from 7-2, if you use only one string it will consider as a milliseconds//
+        //example
+        //const laide = new Date(2018)
+
+        //Previous Century...//
+        //One and Two years will be interpreted as 19xx:
+        //example
+        //const laide = new Date(1, 11, 14)
+
+        //Using Milliseconds//
+        //const laide = new Date(-200000000000)
+
+        //toString//
+        // const laide = new Date()
+        // timer.innerHTML=laide.toString(),
+
+        //toDateString convert the date to a readable format//
+        // const laide = new Date();
+        //      timer.innerHTML=laide.toDateString(),
+
+        //UTC converts to the UTC format
+        //const laide = new Date();
+        //times.innerHTML = laide.toUTCString()
+
+        //ISO conerts date to the ISO format//
+       // const laide = new Date();
+       // times.innerHTML = laide.toISOString()
+
+       //Date Formats//
+
+       /* ISO
+        SHORT DATE
+        LONG DATE
+       */
+      //ISO//
+    //  const laide = new Date("2025");
+    //    times.innerHTML = laide
+
+    //SHORT DATE//
+    //   const laide = new Date("2025/5/6");
+    //    times.innerHTML = laide
+
+    //LONG DATE//
+    //   const laide = new Date("05 May 2027");
+    //    times.innerHTML = laide
+
+    //Date-Parse//
+
+    // let msec = Date.parse("Dec 05 1990")
+    // const laide = new Date(msec)
+    // times.innerHTML = laide
+    
+    </script>
+</body>
+
+ <div id="alarmAudio" style="display: none;">
+        <audio controls autoplays>
+            <source src="./Media/Asake_Lonely_At_The_Top_9jaflaver.com_.mp3">
+        </audio>
+    </div>
+</html>

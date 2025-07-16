@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <script>
+    //     const num1=[1,2,3]
+    //     const num2 =[1,2,3]
+    //     const allNums =[...num1, ...num2, 4,5]
+    //     console.log(allNums)
+
+    //     const user ={name:"olaide",age:45}
+    //     const updatedUser = {...user, location:"Nigeria"}
+    //     console.log(updatedUser)
+
+    //     let data=[
+    //         { name: "Hauwa",
+    //             age: 50
+    //     },
+    //         { name: "Yetunde",
+    //             age: 60
+    //     },
+    //         { name: "Yetunde",
+    //             age: 60
+    //     }
+    // ]
+    // data=[...data,{name:"olaide",age:45},{name:"olaide",age:45},{name:"olaide",age:45}]
+    // console.log(data)
+
+    // //destructing
+    // const details={name:"Seyi", age:89}
+    // const{name,age}=details
+    // console.log(`My name is ${name}and my age is ${age}`)
+
+    // //tenary operator
+    //   const score = 18;
+    //     const Pass= age>18?"Yes":"No"
+    //     console.log(Pass)
+
+
+    // //Nullish Coalescing
+
+    // let surname = null
+    // let display = surname??"Ahmed"
+    // console.log(display)
+
+    // //Optional chaining ?.
+    //     const myDetails={}
+    //     console.log(myDetails?.profile)
+
+    //     //Regex
+    //     //Regular Expression is pattern used to match char
+    //     const str="seyi"
+    //     const validate=/ \+/.test(str)
+    //     console.log(validate)
+
+    class Car{
+      constructor(color, model, brand, fuelefficiency, engineCapacity) {
+        this.color = color;
+        this.model = model;
+        this.brand = brand;
+        this.engineCapacity = engineCapacity;
+        this.disCovered = 0
+        this.engineRunning = false;
+        this.fuelGuage = 0;
+      };
+
+      startEngine(){
+        if (this.engineRunning){
+            console.log(`Your ${this.brand} ${this.model} Engine is running`)
+            return;
+        }
+
+        if (this.fuelGuage === 0){
+            console.log(`you are out of fuel, please refill`)
+        }
+      }
+      stopEngine(){
+        if (!this.engineRunning){
+            console.log(`Your ${this.brand} ${this.model} Engine is not running`)
+        }else {
+            this.engineRunning = false
+        }
+      }
+        
+    };
+    const toyota = new Car ("blue", "camry","Toyota", 0.5, "V6")
+    // toyota.buyFuel(30)
+    toyota.startEngine();
+
+    </script>
+</body>
+</html>
